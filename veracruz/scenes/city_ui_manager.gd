@@ -20,8 +20,9 @@ var current_state: BuildingState = BuildingState.NORMAL
 var selected_building_id: String = ""
 var building_preview: Node2D = null
 var current_hover_area: CityBuildingSlot = null
-var snap_distance_threshold: float = 150.0  # Aumentado para mejor detección
+var snap_distance_threshold: float = 150.0
 var is_snapped: bool = false
+var snapped_position: Vector2 = Vector2.ZERO  # Nueva variable para guardar la posición exacta
 
 func _ready() -> void:
 	_toggle_menu(0)
@@ -103,17 +104,33 @@ func _update_building_preview() -> void:
 	if current_hover_area:
 		is_snapped = true
 		
-		# El preview necesita la misma posición local que tendrá el building
-		var local_pos = current_hover_area.get_local_position_for_building()
-		building_preview.position = local_pos
+		# NUEVO ENFOQUE: Usar directamente la posición del CollisionShape en su espacio local
+		var collision_shape = current_hover_area.get_node_or_null("CollisionShape2D")
+		if collision_shape:
+			# La posición del collision shape ya está en el espacio local correcto del slot
+			# Solo necesitamos transformarla al espacio del CitySprite
+			var slot_transform = current_hover_area.global_transform
+			var collision_local_pos = collision_shape.position
+			
+			# Calcular la posición global del punto donde queremos el edificio
+			var target_global_pos = slot_transform * collision_local_pos
+			
+			# Convertir a espacio local del CitySprite
+			snapped_position = city_sprite.to_local(target_global_pos)
+			building_preview.position = snapped_position
+		else:
+			# Fallback
+			snapped_position = current_hover_area.position
+			building_preview.position = snapped_position
 		
-		current_hover_area.hide_highlight()
+		current_hover_area.show_highlight()
 		
 		var sprite = building_preview.get_node_or_null("SpritePreview")
 		if sprite:
 			sprite.modulate = Color(0.5, 1, 0.5, 0.9)
 	else:
 		is_snapped = false
+		snapped_position = Vector2.ZERO
 		# Convertir posición del mouse a espacio local del CitySprite
 		var mouse_local = city_sprite.to_local(mouse_global_pos)
 		building_preview.position = mouse_local
@@ -160,7 +177,9 @@ func _try_place_building() -> void:
 		return
 	
 	var slot_id = current_hover_area.slot_id
-	var building_position = current_hover_area.get_local_position_for_building()
+	
+	# USAR LA POSICIÓN GUARDADA CUANDO SE HIZO SNAP
+	var building_position = snapped_position
 	
 	print("Placing building:")
 	print("  - Type: %s" % selected_building_id)
@@ -172,7 +191,6 @@ func _try_place_building() -> void:
 	
 	# Construir el edificio
 	if BuildingSystem.ref:
-		# Pasar la posición local correcta para el building
 		var building = BuildingSystem.ref.construct_building(
 			selected_building_id,
 			slot_id,
@@ -274,7 +292,7 @@ func _cancel_building_mode() -> void:
 
 func _cleanup_building_mode() -> void:
 	if current_hover_area:
-		current_hover_area.show_highlight()
+		current_hover_area.hide_highlight()
 		current_hover_area = null
 	
 	if building_preview:
@@ -284,6 +302,7 @@ func _cleanup_building_mode() -> void:
 	current_state = BuildingState.NORMAL
 	selected_building_id = ""
 	is_snapped = false
+	snapped_position = Vector2.ZERO
 	
 	_hide_all_highlights()
 

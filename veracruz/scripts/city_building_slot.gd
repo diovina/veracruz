@@ -69,14 +69,8 @@ func _create_building_visual(building: BuildingInstance) -> void:
 	current_building_visual = Node2D.new()
 	current_building_visual.name = "Building_" + building.building_type + "_" + str(building.instance_id)
 	
-	# Posicionar el visual en la posición LOCAL correcta dentro del CitySprite
-	var collision_shape = get_node_or_null("CollisionShape2D")
-	if collision_shape:
-		# Usar la posición del collision shape que ya tiene las transformaciones correctas
-		current_building_visual.position = collision_shape.position
-	else:
-		# Fallback: convertir nuestra posición global a local del CitySprite
-		current_building_visual.position = city_sprite.to_local(global_position)
+	# Usar la posición guardada en el building (que ya está en espacio local del CitySprite)
+	current_building_visual.position = building.position
 	
 	var template = building.get_template()
 	var texture_path = template.get("texture_path", "")
@@ -149,9 +143,15 @@ func get_global_center() -> Vector2:
 	return global_position
 
 func get_local_position_for_building() -> Vector2:
-	# Obtener la posición LOCAL que debe tener el building dentro del CitySprite
+	# Este método ya no se usa, pero lo mantenemos por compatibilidad
 	var collision_shape = get_node_or_null("CollisionShape2D")
 	if collision_shape:
+		var city_sprite = get_node_or_null("/root/Game/SceneManager/CityScene/CitySprite")
+		if city_sprite:
+			var slot_transform = global_transform
+			var collision_local_pos = collision_shape.position
+			var target_global_pos = slot_transform * collision_local_pos
+			return city_sprite.to_local(target_global_pos)
 		return collision_shape.position
 	return position
 
