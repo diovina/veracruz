@@ -64,7 +64,6 @@ func _initialize_zone_state() -> void:
 			ExtractorSystem.ref.extractor_demolished.connect(_on_extractor_demolished)
 	
 	_update_visual()
-	print("Zone %s (%s): initial=%s, state=%s" % [zone_name, zone_id, is_initial_zone, zone_state])
 
 func _update_visual() -> void:
 	# Limpiar visuales anteriores

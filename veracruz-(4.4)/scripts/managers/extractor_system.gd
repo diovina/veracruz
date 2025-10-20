@@ -8,7 +8,7 @@ signal extractor_upgraded(extractor: ExtractorInstance)
 signal extractor_demolished(extractor: ExtractorInstance)
 signal extractor_production(extractor: ExtractorInstance, resource: String, amount: int)
 
-const ZONE_CONQUEST_COST = {"coins": 500}
+const ZONE_CONQUEST_COST = {"piece_of_8": 500}
 
 func _init() -> void:
 	if ref == null:

@@ -22,7 +22,7 @@ extends Resource
 @export var iron : int = 0
 @export var tools : int = 5
 @export var gold_bars : int = 0
-@export var coins : int = 1000  # Real de a 8 - moneda
+@export var piece_of_8 : int = 100  # Real de a 8 - moneda
 
 ## Gestión
 @export var population : int = 10

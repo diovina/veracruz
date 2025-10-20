@@ -74,7 +74,6 @@ editor_draw_limits = true
 script = ExtResource("2_lnu2h")
 
 [node name="CityScene" type="Node2D" parent="SceneManager"]
-visible = false
 
 [node name="CityUIManager" type="CanvasLayer" parent="SceneManager/CityScene"]
 visible = false
@@ -1223,6 +1222,7 @@ skew = 0.523599
 shape = SubResource("RectangleShape2D_80nbo")
 
 [node name="WorldScene" type="Node2D" parent="SceneManager"]
+visible = false
 
 [node name="WorldUIManager" type="CanvasLayer" parent="SceneManager/WorldScene"]
 script = ExtResource("10_kvpfn")
@@ -1236,31 +1236,8 @@ centered = false
 
 [node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones"]
 script = ExtResource("13_trtic")
-zone_state = 1
 is_initial_zone = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones/Area2D"]
 position = Vector2(1368, 1092)
-shape = SubResource("RectangleShape2D_vtaks")
-
-[node name="ExtractorZones2" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
-
-[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones2"]
-script = ExtResource("13_trtic")
-zone_category = "quarry"
-zone_name = "East Quarry"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones2/Area2D"]
-position = Vector2(960, 1010)
-shape = SubResource("RectangleShape2D_vtaks")
-
-[node name="ExtractorZones3" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
-
-[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones3"]
-script = ExtResource("13_trtic")
-zone_category = "plantation"
-zone_name = "North Plant"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones3/Area2D"]
-position = Vector2(1232, 818)
 shape = SubResource("RectangleShape2D_vtaks")

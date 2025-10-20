@@ -143,15 +143,17 @@ func get_global_center() -> Vector2:
 	return global_position
 
 func get_local_position_for_building() -> Vector2:
-	# ✅ CORRECCIÓN - Usar global_position directamente
+	# Este método ya no se usa, pero lo mantenemos por compatibilidad
 	var collision_shape = get_node_or_null("CollisionShape2D")
 	if collision_shape:
 		var city_sprite = get_node_or_null("/root/Game/SceneManager/CityScene/CitySprite")
 		if city_sprite:
-			var target_global_pos = collision_shape.global_position
+			var slot_transform = global_transform
+			var collision_local_pos = collision_shape.position
+			var target_global_pos = slot_transform * collision_local_pos
 			return city_sprite.to_local(target_global_pos)
-		return collision_shape.global_position
-	return global_position
+		return collision_shape.position
+	return position
 
 func can_place_building(building_type: String) -> bool:
 	if is_occupied:

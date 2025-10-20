@@ -21,7 +21,7 @@ extends Resource
 	"silver": 50,
 	"gold": 30,
 	"gold_bars": 30,
-	"coins": 500,
+	"piece_of_8": 500,
 	"dyes": 50,
 	"cocoa": 50,
 	"agave": 50,

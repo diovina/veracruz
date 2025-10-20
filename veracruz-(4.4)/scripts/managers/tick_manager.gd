@@ -58,6 +58,9 @@ func _execute_tick() -> void:
 			emit_signal("year_passed")
 		
 		emit_signal("month_passed")
+		
+	# Llamar a todos los que necesiten actualización por tick
+	get_tree().call_group("tick_receivers", "on_tick")
 
 func set_game_speed(speed: GameSpeed) -> void:
 	game_speed = speed

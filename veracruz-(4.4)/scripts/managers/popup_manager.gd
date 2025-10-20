@@ -53,34 +53,13 @@ func show_extractor_popup(zone_id: String, zone_type: String, level: int = 0):
 func show_conquest_popup(zone_id: String, zone_name: String, cost: Dictionary):
 	close_current_popup()
 	
-	# ✅ CARGAR SCENE
-	var popup_scene = preload("res://scenes/conquest_popup.tscn")
-	var popup = popup_scene.instantiate()
-	popup.setup(zone_id, zone_name, cost)
-	
-	# Conectar señales
-	popup.confirmed.connect(func(z_id):
-		if ExtractorSystem.ref and ExtractorSystem.ref.unlock_zone(z_id):
-			var zones = get_tree().get_nodes_in_group("world_extractor_zones")
-			for zone in zones:
-				if zone.zone_id == z_id:
-					zone.zone_state = WorldExtractorZone.ZoneState.UNLOCKED
-					zone._update_visual()
-					break
-	)
-	
+	var popup = _create_conquest_popup(zone_id, zone_name, cost)
 	add_child(popup)
+	
 	await get_tree().process_frame
 	_center_popup(popup)
 	current_popup = popup
-	popup.confirmed.connect(func(z_id):
-		print("Conquest confirmed for:", z_id)
-		if ExtractorSystem.ref:
-			print("Attempting unlock...")
-			var result = ExtractorSystem.ref.unlock_zone(z_id)
-			print("Unlock result:", result)
-			)
-	
+
 func show_resource_selection_popup(zone_id: String, category: String, available_resources: Array):
 	close_current_popup()
 	

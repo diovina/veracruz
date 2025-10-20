@@ -12,7 +12,7 @@ static var BUILDINGS = {
 		"upgrade_resource": "wood",
 		"workers_per_level": 10,
 		"required_materials": {},
-		"produced_materials": {"coins": 5},
+		"produced_materials": {"piece_of_8": 5},
 		"texture_path": "res://assets/buildings/PuertoAstillero_Lvl_1.png"
 	},
 	"tavern": {
@@ -85,7 +85,7 @@ static var BUILDINGS = {
 		"upgrade_resource": "wood",
 		"workers_per_level": 10,
 		"required_materials": {},
-		"produced_materials": {"coins": 2},
+		"produced_materials": {"piece_of_8": 2},
 		"texture_path": ""
 	},
 	"church": {

@@ -104,16 +104,24 @@ func _update_building_preview() -> void:
 	if current_hover_area:
 		is_snapped = true
 		
-		# ✅ CORRECCIÓN - Usar global_position directamente
+		# NUEVO ENFOQUE: Usar directamente la posición del CollisionShape en su espacio local
 		var collision_shape = current_hover_area.get_node_or_null("CollisionShape2D")
 		if collision_shape:
-			var target_global_pos = collision_shape.global_position
+			# La posición del collision shape ya está en el espacio local correcto del slot
+			# Solo necesitamos transformarla al espacio del CitySprite
+			var slot_transform = current_hover_area.global_transform
+			var collision_local_pos = collision_shape.position
+			
+			# Calcular la posición global del punto donde queremos el edificio
+			var target_global_pos = slot_transform * collision_local_pos
+			
+			# Convertir a espacio local del CitySprite
 			snapped_position = city_sprite.to_local(target_global_pos)
 			building_preview.position = snapped_position
 		else:
 			# Fallback
-			snapped_position = current_hover_area.global_position
-			building_preview.position = city_sprite.to_local(snapped_position)
+			snapped_position = current_hover_area.position
+			building_preview.position = snapped_position
 		
 		current_hover_area.show_highlight()
 		

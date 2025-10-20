@@ -12,7 +12,7 @@ func _ready() -> void:
 	layer = 100
 	
 	# Crear la UI global
-	#_create_global_ui()
+	_create_global_ui()
 	
 	# Conectar señales
 	if ResourceManager.ref:
@@ -40,7 +40,7 @@ func _create_global_ui() -> void:
 	main_hbox.add_child(resources_panel)
 	
 	# Mostrar recursos principales
-	var resources_to_show = ["wood", "stone", "tools", "coins"]
+	var resources_to_show = ["wood", "stone", "tools", "piece_of_8"]
 	for res in resources_to_show:
 		var vbox = VBoxContainer.new()
 		
