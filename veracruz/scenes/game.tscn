@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://vej20q6oy03v"]
+[gd_scene load_steps=15 format=3 uid="uid://vej20q6oy03v"]
 
 [ext_resource type="Texture2D" uid="uid://v3toqe8lhsde" path="res://assets/Mapa_Veracruz-2.png" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://dq1xagrx4jyit" path="res://scenes/game.gd" id="1_yqjtg"]
@@ -16,9 +16,6 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_80nbo"]
 size = Vector2(16.8413, 25.6203)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtaks"]
-size = Vector2(153.25, 149.25)
 
 [node name="Game" type="Node"]
 script = ExtResource("1_yqjtg")
@@ -1228,6 +1225,7 @@ shape = SubResource("RectangleShape2D_80nbo")
 script = ExtResource("10_kvpfn")
 
 [node name="WorldSprite" type="Sprite2D" parent="SceneManager/WorldScene"]
+position = Vector2(21, -27)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("10_vtaks")
 centered = false
@@ -1240,8 +1238,8 @@ zone_state = 1
 is_initial_zone = true
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones/Area2D"]
-position = Vector2(1368, 1092)
-polygon = PackedVector2Array(80, -142, 202, -130, 128, -72, -2, 148, -156, 106, -154, 36, -130, -38)
+position = Vector2(1380.547, 1061.0847)
+polygon = PackedVector2Array(67.453, -109.08472, 189.453, -99.08476, 175.453, -81.08472, 151.453, -63.084717, 109.453, -31.084717, 77.453, 8.915283, -14.547003, 178.91524, -168.547, 136.91524, -166.547, 66.91524, -138.547, -1.0847168, -38.546997, -51.084717)
 
 [node name="BorderLine" type="Line2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones/Area2D"]
 width = 3.0
@@ -1258,8 +1256,8 @@ zone_category = "quarry"
 zone_name = "East Quarry"
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones2/Area2D"]
-position = Vector2(960, 1010)
-polygon = PackedVector2Array(-6, -206, 76, -152, 134, -62, 190, -54, 266, 44, 242, 190, 158, 146, 76, 158, -26, 110, -126, 172, -216, 116, -214, -12, -234, -92, -110, -174)
+position = Vector2(972.73047, 1051.3435)
+polygon = PackedVector2Array(-20.730469, -241.3435, 21.269531, -223.3435, 59.26953, -189.3435, 97.26953, -125.343506, 127.26953, -97.343506, 179.26953, -93.343506, 209.26953, -43.343506, 257.26953, 4.656494, 233.26953, 74.656494, 229.2695, 148.65646, 145.2695, 104.65646, 63.269505, 116.65646, -38.730495, 68.65646, -142.73047, 124.656494, -172.73047, 82.656494, -228.7305, 74.65646, -218.73047, -5.343506, -236.73047, -71.343506, -242.73047, -115.343506, -232.73047, -143.3435, -178.73047, -169.3435, -122.73049, -215.34354, -68.73047, -233.3435)
 
 [node name="ExtractorZones3" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
 
@@ -1268,6 +1266,281 @@ script = ExtResource("13_trtic")
 zone_category = "plantation"
 zone_name = "North Plant"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones3/Area2D"]
-position = Vector2(1232, 818)
-shape = SubResource("RectangleShape2D_vtaks")
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones3/Area2D"]
+position = Vector2(1164.6528, 794.8614)
+polygon = PackedVector2Array(31.347168, -140.86139, 73.34717, -160.86139, 141.34718, -178.86137, 167.34717, -152.86139, 195.34717, -76.86139, 203.34717, 3.1386108, 195.34717, 57.13861, 229.34717, 99.13861, 261.34717, 131.13861, 273.34717, 153.13863, 69.34717, 257.1386, 21.347168, 201.13861, 5.347168, 181.13861, -2.652832, 153.13861, -72.65282, 145.13863, -130.65283, 55.13861, -200.65282, 5.138626, -194.65282, -62.861374, -70.65283, -138.86139, -66.65283, -152.86139, -12.652832, -132.86139)
+
+[node name="ExtractorZones4" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
+
+[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones4"]
+script = ExtResource("13_trtic")
+zone_category = "plantation"
+zone_name = "North Plant"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones4/Area2D"]
+position = Vector2(1737.9381, 639.3491)
+polygon = PackedVector2Array(64.06189, -251.34912, 150.06189, -285.34912, 242.06195, -307.34912, 298.06195, -265.34912, 354.0619, -259.34912, 350.0619, -243.34912, 328.0619, -211.34912, 312.0619, -135.34912, 316.0619, -85.34912, 306.0619, -65.34912, 282.0619, -37.34912, 246.06189, -7.349121, 248.06195, 74.65086, 84.06189, 116.65088, -79.93811, 178.65088, -147.93811, 226.65088, -169.93811, 310.65088, -205.93811, 314.65088, -287.9381, 302.65088, -303.9381, 280.65088, -339.9381, 246.65088, -365.93805, 212.65086, -359.9381, 156.65088, -363.93805, 88.65086, -387.9381, 16.650879, -295.9381, 34.65088, -195.93805, 30.650864, -75.93806, -19.349136, 18.06189, -155.34912)
+
+[node name="ExtractorZones5" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
+
+[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones5"]
+script = ExtResource("13_trtic")
+zone_category = "plantation"
+zone_name = "North Plant"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones5/Area2D"]
+position = Vector2(1333.1731, 498.88766)
+polygon = PackedVector2Array(300.8269, -206.88766, 390.8269, -166.88766, 454.8269, -128.88766, 454.8269, -94.887665, 404.8269, -4.887665, 324.8269, 113.11233, 254.8269, 143.11234, 184.8269, 165.11234, 102.826904, 165.11234, 12.826904, 145.11234, -25.173105, 107.11233, -93.173096, 125.112335, -153.17311, 153.11234, -199.1731, 149.11234, -233.1731, 131.11234, -243.1731, 103.112335, -245.1731, 35.112335, -277.1731, 1.1123352, -297.1731, -40.887672, -285.1731, -76.887665, -225.1731, -166.88766, -245.17311, -236.88766, 332.8269, -240.88766)
+
+[node name="ExtractorZones6" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
+
+[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones6"]
+script = ExtResource("13_trtic")
+zone_category = "plantation"
+zone_name = "North Plant"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones6/Area2D"]
+position = Vector2(702.74963, 507.03906)
+polygon = PackedVector2Array(-124.74963, 196.96094, -52.749634, 212.96094, -32.749638, 182.96094, -2.7496338, 160.96094, 3.2503662, 112.96094, 59.250366, 56.960938, 97.25037, -35.039063, 321.25037, -41.039063, 331.25037, -87.03906, 395.25037, -181.03906, 379.25037, -237.03906, -206.74963, -237.03906, -228.74963, -185.03906, -216.74963, -115.03906, -162.74963, -89.03906, -164.74963, -33.039063, -210.74963, 102.96094, -176.74963, 180.96094)
+
+[node name="ExtractorZones7" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
+
+[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones7"]
+script = ExtResource("13_trtic")
+zone_category = "plantation"
+zone_name = "North Plant"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones7/Area2D"]
+position = Vector2(881.3904, 708.18066)
+polygon = PackedVector2Array(-71.39038, -228.18066, 148.60962, -232.18066, 194.60962, -164.18066, 208.60962, -70.180664, 200.60962, -56.180664, 78.60962, 19.819336, 70.60962, 89.819336, -15.390396, 109.81934, -77.390396, 151.81934, -131.3904, 101.81934, -131.3904, 49.819344, -177.3904, -14.180656, -161.39038, -88.180664, -105.39038, -138.18066)
+
+[node name="ExtractorZones8" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
+
+[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones8"]
+script = ExtResource("13_trtic")
+zone_category = "plantation"
+zone_name = "North Plant"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones8/Area2D"]
+position = Vector2(655.19147, 858.08203)
+polygon = PackedVector2Array(34.808533, -172.08203, 80.80853, -94.08203, 92.80853, -28.082031, 134.80852, 9.917938, 78.80852, 45.91794, 62.808533, 67.91797, 64.80852, 99.91794, 90.80852, 181.91794, 78.80853, 273.91797, 40.808533, 279.91797, -5.1914673, 171.91797, -39.191467, 113.91797, -45.191467, 61.91797, -79.19147, 29.917969, -101.19147, -2.0820313, -63.191467, -42.08203, -65.19147, -64.08203, -91.19147, -72.08203, -83.19147, -94.08203, -113.19147, -116.08203, -105.19147, -150.08203, -1.1914787, -126.08206, 16.808533, -158.08203)
+
+[node name="ExtractorZones9" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
+
+[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones9"]
+script = ExtResource("13_trtic")
+zone_category = "plantation"
+zone_name = "North Plant"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones9/Area2D"]
+position = Vector2(472, 1740)
+polygon = PackedVector2Array(226, -588, 288, -602, 328, -588, 344, -558, 394, -470, 456, -426, 456, -406, 408, -356, 432, -258, 356, -266, 328, -250, 278, -272, 264, -290, 246, -324, 202, -366, 172, -396, 150, -442, 168, -488, 222, -522)
+
+[node name="ExtractorZones10" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
+
+[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones10"]
+script = ExtResource("13_trtic")
+zone_category = "plantation"
+zone_name = "North Plant"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones10/Area2D"]
+position = Vector2(1040.6444, 1286.3357)
+polygon = PackedVector2Array(-206.64441, -90.33566, -164.64441, -126.33569, -102.64441, -152.3357, -16.64441, -112.33566, 75.35559, -120.33566, 177.35559, -72.33566, 223.35559, -70.33569, 261.3556, -50.335663, 213.35559, 29.664307, 65.35559, 25.664337, 27.35559, 61.664337, 13.355591, 129.6643, -28.64441, 185.66434, -76.64441, 175.6643, -128.64441, 185.6643, -148.64441, 111.66434, -112.64441, 63.664307, -102.64441, 19.664307, -160.64441, -16.335663)
+
+[node name="ExtractorZones11" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
+
+[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones11"]
+script = ExtResource("13_trtic")
+zone_category = "plantation"
+zone_name = "North Plant"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones11/Area2D"]
+position = Vector2(1176.3889, 1423.2815)
+polygon = PackedVector2Array(-62.388916, -101.281494, -26.388916, -105.281494, 81.611145, -95.281555, 87.611084, -77.281494, 63.611145, -41.281555, 73.611084, -13.281494, 127.611145, 6.718445, 155.61108, 34.718506, 105.611084, 134.7185, 107.611084, 146.7185, 71.611084, 148.7185, -10.388916, 148.7185, -44.388855, 140.71844, -82.388916, 86.718506, -150.38892, 90.718506, -164.38892, 70.718506, -140.38892, 30.718506, -112.388916, 0.71850586, -96.388916, -71.281494)
+
+[node name="ExtractorZones12" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
+
+[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones12"]
+script = ExtResource("13_trtic")
+zone_category = "plantation"
+zone_name = "North Plant"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones12/Area2D"]
+position = Vector2(1328.1804, 1348.2175)
+polygon = PackedVector2Array(-18.18042, -108.21753, 41.81964, -96.21747, 61.81958, -64.21753, 41.81964, -30.217468, 67.81958, 41.78247, 87.81964, 85.78253, 55.81958, 97.78247, 17.819641, 95.78253, 1.8195801, 91.78247, -18.180359, 73.78253, -54.18042, 61.78247, -74.18036, 45.78253, -72.18042, 25.78247, -54.18042, 1.7824707, -58.18042, -30.21753, -44.18042, -64.21753)
+
+[node name="ExtractorZones13" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
+
+[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones13"]
+script = ExtResource("13_trtic")
+zone_category = "plantation"
+zone_name = "North Plant"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones13/Area2D"]
+position = Vector2(1029.4297, 1542.6646)
+polygon = PackedVector2Array(-209.42975, -48.66455, -193.42969, -58.66455, -139.42969, -48.66455, -71.42975, -66.66455, -29.429688, -58.66455, -21.429688, -22.66455, 50.57025, -22.66455, 106.57025, 29.33545, 126.57031, 37.33545, 114.57031, 79.33545, 124.57031, 127.33545, 46.570313, 99.33545, -43.429688, 55.33545, -137.42969, -0.6645508)
+
+[node name="ExtractorZones14" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
+
+[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones14"]
+script = ExtResource("13_trtic")
+zone_category = "plantation"
+zone_name = "North Plant"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones14/Area2D"]
+position = Vector2(1348.5415, 1654.035)
+polygon = PackedVector2Array(-180.5415, 23.964966, -188.5415, -12.035034, -184.5415, -52.035034, -172.5415, -72.035034, -144.5415, -78.035034, -100.541504, -72.035034, -54.541504, -74.035034, -24.541504, -62.035034, 25.458496, -74.035034, 125.458496, 5.964966, 175.4585, 17.964966, 189.4585, 37.964966, 179.4585, 61.964966, 73.458496, 45.964966, -54.541504, 65.964966)
+
+[node name="ExtractorZones15" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
+
+[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones15"]
+script = ExtResource("13_trtic")
+zone_category = "plantation"
+zone_name = "North Plant"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones15/Area2D"]
+position = Vector2(1462.5996, 1565.217)
+polygon = PackedVector2Array(-148.59961, 14.782959, -168.59961, -5.217041, -148.59961, -55.21704, -118.599625, -109.216995, -80.59961, -107.21704, -44.59961, -115.21704, -18.59961, -67.21704, 47.40039, -45.21704, 77.40039, -11.217041, 105.40039, -9.217041, 127.400375, 36.783005, 99.40039, 68.78296, 59.400375, 92.783005, 1.4003754, 80.783005, -82.59961, 2.782959)
+
+[node name="ExtractorZones16" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
+
+[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones16"]
+script = ExtResource("13_trtic")
+zone_category = "plantation"
+zone_name = "North Plant"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones16/Area2D"]
+position = Vector2(1645.769, 1682.2963)
+polygon = PackedVector2Array(-63.76908, -122.2962, 142.23093, -146.2962, 210.23096, -74.296265, 214.23096, -38.296265, 190.23096, -2.2962646, 210.23096, 71.703735, 100.23096, 99.703735, 58.230957, 123.703735, 30.230957, 167.70374, -45.769043, 83.703735, -109.76904, 39.703735, -97.76904, 11.703735, -111.76904, -18.296265, -73.76904, -44.296265, -45.769043, -80.296265)
+
+[node name="ExtractorZones17" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
+
+[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones17"]
+script = ExtResource("13_trtic")
+zone_category = "plantation"
+zone_name = "North Plant"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones17/Area2D"]
+position = Vector2(1922.7096, 1554.429)
+polygon = PackedVector2Array(-118.70955, -12.428921, -56.709553, 47.57108, -46.709595, 77.571045, 129.29045, 83.571075, 153.29045, 9.571079, 147.29045, -68.428925, 69.290405, -136.42896, -14.709595, -38.428955)
+
+[node name="ExtractorZones18" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
+
+[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones18"]
+script = ExtResource("13_trtic")
+zone_category = "plantation"
+zone_name = "North Plant"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones18/Area2D"]
+position = Vector2(2157.0278, 1501.8606)
+polygon = PackedVector2Array(-159.02783, -89.860596, -123.02778, -129.86061, 2.9722233, -147.86061, 104.97222, -159.86061, 206.97217, -149.8606, 222.97217, -137.8606, 200.97217, -111.860596, 166.97217, -83.860596, 128.97217, -51.860596, 86.97222, -25.860615, 80.97222, 18.139385, 36.97222, 56.139385, 22.972223, 96.13939, -5.0277767, 122.13939, -45.02778, 138.13939, -85.02783, 120.139404, -71.02778, 28.139385, -83.02778, -19.860615)
+
+[node name="ExtractorZones19" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
+
+[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones19"]
+script = ExtResource("13_trtic")
+zone_category = "plantation"
+zone_name = "North Plant"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones19/Area2D"]
+position = Vector2(1938.9291, 1772.9956)
+polygon = PackedVector2Array(-64.92908, -130.9956, 21.070923, -122.995605, 107.07092, -124.995605, 129.07092, -138.9956, 165.07092, -126.995605, 199.07092, -126.99565, 149.07092, -60.995647, 91.070915, -28.995647, 91.070915, -18.995647, 173.07092, -6.9956055, 161.07092, 25.004395, 121.070915, 57.004353, 43.070923, 85.004395, -24.929085, 155.00435, -60.929077, 155.0044, -120.929085, 125.00435, -210.92908, 107.00435, -250.92908, 83.004395, -220.92908, 35.004353, -68.929085, -14.995647, -86.929085, -88.99565)
+
+[node name="ExtractorZones20" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
+
+[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones20"]
+script = ExtResource("13_trtic")
+zone_category = "plantation"
+zone_name = "North Plant"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones20/Area2D"]
+position = Vector2(2263.227, 1967.8538)
+polygon = PackedVector2Array(-137.22713, -203.85374, -37.227127, -191.85374, 68.77287, -199.85374, 162.77287, -195.85374, 222.77287, -169.85374, 258.7729, -149.85374, 278.7729, -133.85374, 272.7729, -73.853745, 216.77287, -23.853745, 194.77287, 50.146255, 166.77287, 76.146255, 162.77287, 112.146255, 128.77287, 132.14626, 146.77287, 178.14626, -79.22713, 184.14626, -57.227127, 172.14626, -77.22713, 156.14626, -63.227127, 134.14626, -117.22713, 94.146255, -151.22713, 42.146255, -201.22713, 10.1462555, -169.22713, -9.8537445, -183.22713, -23.853745, -223.22713, -7.8537445, -283.2271, -13.8537445, -339.2271, -35.853745, -271.2271, -95.853745, -185.22713, -133.85374, -145.22713, -173.85374)
+
+[node name="ExtractorZones21" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
+
+[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones21"]
+script = ExtResource("13_trtic")
+zone_category = "plantation"
+zone_name = "North Plant"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones21/Area2D"]
+position = Vector2(373.13528, 548.2137)
+polygon = PackedVector2Array(98.86472, -164.21368, 94.86472, -226.21368, 112.864716, -274.21368, 26.864716, -278.21368, -1.1352787, -344.21368, -11.135284, -546.2137, -41.135284, -534.2137, -51.135284, -518.2137, -41.135284, -462.21368, -71.13528, -400.21368, -17.135279, -348.21368, 16.864716, -260.21368, -1.1352844, -230.21368, -27.135279, -80.213684, -51.135277, -38.213684, -17.135284, 47.786316, -33.135277, 91.786316, -73.13528, 107.786316, -105.13528, 107.786316, -93.13528, 157.78632, -61.135277, 185.78632, -33.135277, 193.78632, -15.135279, 285.78632, -55.135277, 331.78632, 0.8647213, 403.78632, 12.864716, 451.78632, 16.864716, 501.78632, 62.864716, 485.78632, 78.864716, 453.78632, 72.864716, 409.78632, 34.864723, 393.78632, 66.86472, 213.78632, 44.864723, 147.78632, 60.864723, 53.786316, 40.864723, -58.213684)
+
+[node name="ExtractorZones22" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
+
+[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones22"]
+script = ExtResource("13_trtic")
+zone_category = "plantation"
+zone_name = "North Plant"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones22/Area2D"]
+position = Vector2(2260.3354, 634.31055)
+polygon = PackedVector2Array(-264.33536, 75.68947, -264.33536, -4.3105316, -218.33536, -36.31053, -198.33536, -76.31053, -198.33545, -134.31055, -188.33536, -180.31053, -178.33545, -214.31055, -118.33545, -194.31055, -2.3353577, -194.31053, 65.66464, -200.31053, 79.66464, -166.31053, 75.66464, -42.31053, 179.66464, 3.6894684, 209.66464, 57.68947, 113.66464, 65.68947, 101.66464, 81.68947, 137.66464, 89.68947, 101.66464, 111.68947, 129.66464, 139.68947, 73.66464, 133.68947, 47.664642, 145.68947, -20.335358, 137.68947, -60.335358, 121.68947, -74.33536, 109.68947, -106.33536, 93.68947, -184.33536, 87.68947, -204.33536, 75.68947)
+
+[node name="ExtractorZones23" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
+
+[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones23"]
+script = ExtResource("13_trtic")
+zone_category = "plantation"
+zone_name = "North Plant"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones23/Area2D"]
+position = Vector2(2211.48, 382.02197)
+polygon = PackedVector2Array(-551.48, -110.02197, -567.48, -96.02197, -477.47998, -56.021973, -409.47998, -10.021973, -239.47998, -56.021973, -191.47998, -34.021973, -161.47998, -16.021973, -105.47998, -8.021973, -121.47998, 27.978027, -63.47998, 45.978027, -1.4799805, 49.978027, 56.52002, 47.978027, 120.52002, 41.978027, 130.52002, 53.978027, 250.52002, 69.97803, 286.52002, 109.97803, 358.52002, 71.97803, 416.52002, 61.978027, 528.52, 31.978027, 540.52, -32.021973, 532.52, -88.02197, 518.52, -108.02197)
+
+[node name="ExtractorZones24" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
+
+[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones24"]
+script = ExtResource("13_trtic")
+zone_category = "plantation"
+zone_name = "North Plant"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones24/Area2D"]
+position = Vector2(2576.1492, 602.4096)
+polygon = PackedVector2Array(-232.14911, -156.40962, -230.14911, -12.409622, -134.14911, 25.590378, -110.14911, 49.590378, -100.14911, 89.59038, -36.14911, 83.59038, -22.149109, 97.59038, 93.85089, 89.59038, 123.85089, 95.59038, 161.85089, 49.590378, 205.85089, 13.590378, 197.85089, -22.409622, 213.85089, -78.40962, 161.85089, -172.40962, 1.8508911, -138.40962, -74.14911, -100.40962, -112.14911, -140.40962)
+
+[node name="ExtractorZones25" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
+
+[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones25"]
+script = ExtResource("13_trtic")
+zone_category = "plantation"
+zone_name = "North Plant"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones25/Area2D"]
+position = Vector2(2893.124, 446.55167)
+polygon = PackedVector2Array(-147.12405, -24.551678, -127.124054, -104.55168, -145.12402, -170.55167, 146.87595, -170.55168, 102.875946, -128.55168, 92.875946, -98.55168, 98.875946, -76.55168, 218.87595, 7.4483223, 234.87595, 91.44832, 138.87595, 191.44832, 102.875946, 207.44832, 14.875945, 193.44832, -57.124054, 191.44832, -101.124054, 175.44832, -107.124054, 137.44832, -91.124054, 75.44832)
+
+[node name="ExtractorZones26" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
+
+[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones26"]
+script = ExtResource("13_trtic")
+zone_category = "plantation"
+zone_name = "North Plant"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones26/Area2D"]
+position = Vector2(2983.6223, 782.9631)
+polygon = PackedVector2Array(-199.62227, -154.9631, -131.62227, -134.9631, -73.62227, -134.9631, 24.377728, -120.963104, 96.37773, -164.9631, 114.37773, -198.9631, 154.37773, -230.9631, 224.37773, -230.9631, 256.37772, -216.9631, 158.37773, -154.9631, 122.37773, -98.963104, 120.37773, -62.963104, 132.37773, 5.0368977, 154.37773, 53.036896, 150.37773, 95.036896, 178.37773, 195.0369, 144.37773, 253.0369, 110.37773, 313.0369, 38.377728, 313.0369, 38.377728, 277.0369, 6.3777275, 255.0369, -5.6222725, 227.0369, -37.622272, 205.0369, -47.622272, 165.0369, -25.622272, 119.036896, -55.622272, 123.036896, -15.6222725, 55.036896, -19.622272, 21.036898, -53.622272, 17.036898, -67.62227, -20.963102, -91.62227, -46.963104, -133.62227, -52.963104, -191.62227, -22.963102, -241.62227, -32.963104, -241.62227, -46.963104, -271.62228, -76.963104, -257.62228, -106.963104, -227.62227, -128.9631)
+
+[node name="ExtractorZones27" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
+
+[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones27"]
+script = ExtResource("13_trtic")
+zone_category = "plantation"
+zone_name = "North Plant"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones27/Area2D"]
+position = Vector2(3562.6338, 254.35016)
+polygon = PackedVector2Array(-172.63365, -246.35016, 263.36633, -240.35016, 269.36633, -186.35016, 207.36635, -128.35016, 207.36635, -148.35016, 173.36635, -150.35016, 189.36635, -86.35017, 107.36635, -14.350161, 129.36635, -60.35016, 111.36635, -74.35017, 121.36635, -144.35016, 95.36635, -134.35016, 79.36635, -90.35017, 79.36635, -10.350161, 113.36635, 21.64984, 111.36635, 65.64983, 127.36635, 101.64983, 57.36635, 141.64984, 41.36635, 157.64984, 21.366348, 157.64984, -90.63365, 195.64984, -90.63365, 225.64984, -108.63365, 203.64984, -186.63365, 229.64984, -206.63365, 259.64984, -312.63367, 301.64984, -386.63367, 283.64984, -424.63367, 287.64984, -440.63367, 199.64984, -506.63367, 151.64984, -562.63367, 105.64983, -560.63367, 77.64983, -502.63367, 21.64984, -168.63365, 21.64984)
+
+[node name="ExtractorZones28" type="Node2D" parent="SceneManager/WorldScene/WorldSprite"]
+
+[node name="Area2D" type="Area2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones28"]
+script = ExtResource("13_trtic")
+zone_category = "plantation"
+zone_name = "North Plant"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="SceneManager/WorldScene/WorldSprite/ExtractorZones28/Area2D"]
+position = Vector2(3149.8506, 1357.2465)
+polygon = PackedVector2Array(-509.85065, -55.24642, -459.85065, -85.24642, -299.85065, -113.24642, -207.85063, -111.24642, -153.85063, -127.24642, -13.850637, -69.24642, 70.14936, -67.24642, 122.14936, -47.24642, 148.14937, 6.7535763, 184.14937, 24.753576, 306.14935, 42.75358, 288.14935, 56.75358, 354.14935, 74.75358, 410.14935, 104.75358, 310.14935, 118.75358, 272.14935, 128.75357, 148.14937, 124.75358, 68.14936, 128.75357, 70.14936, 120.75358, 146.14937, 92.75358, 148.14937, 68.75358, 54.14936, 68.75358, 26.149363, 48.75358, 20.149363, 8.753576, -31.850637, -3.2464237, -57.85064, -5.2464237, -125.85064, -31.246424, -201.85063, -39.24642, -267.85065, -29.246424, -289.85065, -55.24642, -245.85063, -61.24642, -245.85063, -77.24642, -299.85065, -77.24642, -473.85065, -31.246424, -537.85065, -25.246424)
