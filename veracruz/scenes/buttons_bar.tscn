@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=3 uid="uid://dodnivugavugy"]
+
+[ext_resource type="Texture2D" uid="uid://bpqhm1g302rl0" path="res://themes/buttons/normal/Botón_construir_escala.png" id="1_gcenm"]
+[ext_resource type="Texture2D" uid="uid://b6i3w6pmr0l2l" path="res://themes/buttons/normal/Botón_inventario_escala.png" id="2_d3oku"]
+[ext_resource type="Texture2D" uid="uid://dpm0w1s1e0gk0" path="res://themes/buttons/pressed/Botón_construir_escala_click.png" id="2_jn0dg"]
+[ext_resource type="Texture2D" uid="uid://dpxnj7ajy8khr" path="res://themes/buttons/hover/Botón_construir_escala_hover.png" id="3_4qihx"]
+[ext_resource type="Texture2D" uid="uid://dpuex78ge7hp3" path="res://themes/buttons/normal/Botón_mundo_escala.png" id="3_jn0dg"]
+[ext_resource type="Texture2D" uid="uid://b61sp2xbktrx" path="res://themes/buttons/normal/Botón_navegar_escala.png" id="4_4qihx"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -657.0
+offset_top = -164.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="BuildButton" type="TextureButton" parent="PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_gcenm")
+texture_pressed = ExtResource("2_jn0dg")
+texture_hover = ExtResource("3_4qihx")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="InventoryButton" type="TextureButton" parent="PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("2_d3oku")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="WorldButton" type="TextureButton" parent="PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("3_jn0dg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ExploreButton" type="TextureButton" parent="PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("4_4qihx")
+ignore_texture_size = true
+stretch_mode = 5
