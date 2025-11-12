@@ -1,0 +1,110 @@
+[gd_scene load_steps=7 format=3 uid="uid://bhg7qfhbpk24j"]
+
+[ext_resource type="Theme" uid="uid://d361i4ipkkbin" path="res://themes/UI_theme.tres" id="1_3yonj"]
+[ext_resource type="Texture2D" uid="uid://5vu36ann7o0k" path="res://assets/resources/wood.png" id="2_54r3s"]
+[ext_resource type="Texture2D" uid="uid://dn86cxfhbapl8" path="res://assets/resources/stone.png" id="3_yil7o"]
+[ext_resource type="Texture2D" uid="uid://c7v0i8tbvgbqm" path="res://assets/resources/gold_ore.png" id="4_nuq0q"]
+[ext_resource type="Texture2D" uid="uid://2ufmisr0ak57" path="res://assets/resources/silver_ore.png" id="5_0uyao"]
+[ext_resource type="Texture2D" uid="uid://c5brx4j3kql26" path="res://assets/resources/corn.png" id="6_ucwmf"]
+
+[node name="top_bar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -412.0
+offset_top = 5.0
+offset_right = 413.0
+offset_bottom = 127.0
+grow_horizontal = 2
+theme = ExtResource("1_3yonj")
+theme_type_variation = &"top_bar_panel"
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 21
+theme_override_constants/v_separation = 8
+columns = 12
+
+[node name="wood_icon" type="TextureRect" parent="PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_54r3s")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="wod_label" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+text = "%%%"
+
+[node name="stone_icon" type="TextureRect" parent="PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("3_yil7o")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="stone_label" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+text = "%%%"
+
+[node name="gold_ore_icon" type="TextureRect" parent="PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_nuq0q")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="gold_ore_label" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+text = "%%%"
+
+[node name="silver_ore_icon" type="TextureRect" parent="PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("5_0uyao")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="silver_ore_label" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+text = "%%%"
+
+[node name="corn_icon" type="TextureRect" parent="PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("6_ucwmf")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="corn_label" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+text = "%%%"
+
+[node name="corn_icon2" type="TextureRect" parent="PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("6_ucwmf")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="corn_label2" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+text = "%%%"
+
+[node name="corn_icon3" type="TextureRect" parent="PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("6_ucwmf")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="corn_label3" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+text = "%%%"
