@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3083qgflbbwt"
-path="res://.godot/imported/Bloque-2.png-d2afab2f795d632eb40068aa4ac61adf.ctex"
+uid="uid://bsjcmauh1152b"
+path="res://.godot/imported/Botón_inventario_hover.png-d687363a36a9547513c02e6216b5c83e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Bloque-2.png"
-dest_files=["res://.godot/imported/Bloque-2.png-d2afab2f795d632eb40068aa4ac61adf.ctex"]
+source_file="res://themes/buttons/hover/Botón_inventario_hover.png"
+dest_files=["res://.godot/imported/Botón_inventario_hover.png-d687363a36a9547513c02e6216b5c83e.ctex"]
 
 [params]
 

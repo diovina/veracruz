@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3083qgflbbwt"
-path="res://.godot/imported/Bloque-2.png-d2afab2f795d632eb40068aa4ac61adf.ctex"
+uid="uid://c5brx4j3kql26"
+path="res://.godot/imported/corn.png-8c0b9839db275dfac4df375c1f1d1137.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Bloque-2.png"
-dest_files=["res://.godot/imported/Bloque-2.png-d2afab2f795d632eb40068aa4ac61adf.ctex"]
+source_file="res://assets/resources/corn.png"
+dest_files=["res://.godot/imported/corn.png-8c0b9839db275dfac4df375c1f1d1137.ctex"]
 
 [params]
 

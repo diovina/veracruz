@@ -1,0 +1,56 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://d361i4ipkkbin"]
+
+[ext_resource type="FontFile" uid="uid://do22lef6om1tb" path="res://themes/font/CaslonAntique.ttf" id="1_ktcvj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_12j8l"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.28235295, 0.23529412, 0.19607843, 0.9411765)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.17002133, 0.12620065, 0.12620458, 0.92156863)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ktcvj"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.28235295, 0.23529412, 0.19607843, 0.9411765)
+border_width_top = 30
+border_width_bottom = 30
+border_color = Color(0.16862746, 0.1254902, 0.1254902, 0.92156863)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c5icn"]
+bg_color = Color(0.28235295, 0.23529412, 0.19607843, 0.9411765)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.16862746, 0.1254902, 0.1254902, 0.78431374)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[resource]
+Label/colors/font_color = Color(0.78431374, 0.70980394, 0.4, 1)
+Label/font_sizes/font_size = 30
+Label/fonts/font = ExtResource("1_ktcvj")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_12j8l")
+button_bar_panel/base_type = &"PanelContainer"
+button_bar_panel/styles/panel = SubResource("StyleBoxFlat_ktcvj")
+top_bar_panel/base_type = &"PanelContainer"
+top_bar_panel/styles/panel = SubResource("StyleBoxFlat_c5icn")
