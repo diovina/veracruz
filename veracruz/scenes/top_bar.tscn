@@ -108,3 +108,13 @@ stretch_mode = 5
 [node name="corn_label3" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
 layout_mode = 2
 text = "%%%"
+
+[node name="corn_icon4" type="TextureRect" parent="PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("6_ucwmf")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="corn_label4" type="Label" parent="PanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+text = "%%%"
